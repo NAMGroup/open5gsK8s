@@ -4,13 +4,13 @@
 
 open5gs:
   image:
-    repository: registry.gitlab.com/infinitydon/registry/open5gs-aio
+    repository: 10.10.10.72:5000/open5gs-aio
     pullPolicy: IfNotPresent
     tag: "v2.2.2"
 
 webui:
   image:
-    repository: registry.gitlab.com/infinitydon/registry/open5gs-webui
+    repository: 10.10.10.72:5000/open5gs-webui
     pullPolicy: IfNotPresent
     tag: "v2.2.2"
   ingress:
@@ -42,9 +42,9 @@ webui:
 dnn: internet  
 
 amf:
-  mcc: 208
-  mnc: 93
-  tac: 7
+  mcc: 001
+  mnc: 01
+  tac: 100
 
 # Primary/Native kubernetes interface
 k8s:
