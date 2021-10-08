@@ -4,15 +4,16 @@
 
 open5gs:
   image:
-    repository: 10.10.10.72:5000/open5gs-aio
+#    repository: 10.10.10.72:5000/open5gs-aio
+    repository: 10.10.10.72:5000/open5gs-nam
     pullPolicy: IfNotPresent
-    tag: "v2.2.2"
+    tag: "v2.3.4"
 
 webui:
   image:
-    repository: 10.10.10.72:5000/open5gs-webui
+    repository: 10.10.10.72:5000/open5gs-webui-nam-new
     pullPolicy: IfNotPresent
-    tag: "v2.2.2"
+    tag: "v2.3.4"
   ingress:
     enabled: false
     ## Ingress annotations done as key:value pairs
@@ -42,9 +43,9 @@ webui:
 dnn: internet  
 
 amf:
-  mcc: 001
-  mnc: 01
-  tac: 100
+  mcc: "001"
+  mnc: "01"
+  tac: "100"
 
 # Primary/Native kubernetes interface
 k8s:
