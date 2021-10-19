@@ -29,7 +29,7 @@ spec:
           name: mongodb
         volumeMounts:
         - name: mongodb-persistent-storage
-          mountPath: /data/db
+          mountPath: "/tmp/data-o5gs"
       volumes:
       - name: mongodb-persistent-storage
         persistentVolumeClaim:
