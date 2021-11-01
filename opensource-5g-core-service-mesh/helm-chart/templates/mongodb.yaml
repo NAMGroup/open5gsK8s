@@ -29,7 +29,7 @@ spec:
           name: mongodb
         volumeMounts:
         - name: mongodb-persistent-storage
-          mountPath: "/tmp/data-o5gs"
+          mountPath: /data/db
       volumes:
       - name: mongodb-persistent-storage
         persistentVolumeClaim:
@@ -47,7 +47,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/tmp/data-o5gs"
+    path: /tmp/data-o5gs
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
