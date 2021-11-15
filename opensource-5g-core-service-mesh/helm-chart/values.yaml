@@ -50,3 +50,5 @@ amf:
 # Primary/Native kubernetes interface
 k8s:
  interface: eth0
+
+mongoPath: /tmp/data-o5gs

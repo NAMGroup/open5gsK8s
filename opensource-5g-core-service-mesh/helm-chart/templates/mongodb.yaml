@@ -24,6 +24,10 @@ spec:
       containers:
       - image: free5gmano/nextepc-mongodb
         name: open5gs-mongodb
+        lifecycle:
+            postStart:
+              exec:
+                command: ["mongorestore", "/data/db/Open5Gs_latest/open5gs/subscribers.bson", "-c", "subscribers", "-d", "open5gs"]
         ports:
         - containerPort: 27017
           name: mongodb
@@ -47,7 +51,8 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /tmp/data-o5gs
+    #path: /tmp/data-o5gs
+    path: {{ .Values.mongoPath }}
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
