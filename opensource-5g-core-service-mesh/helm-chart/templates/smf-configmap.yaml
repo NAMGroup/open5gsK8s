@@ -17,7 +17,7 @@ data:
         - addr: 0.0.0.0
           advertise: open5gs-smf
         pfcp:
-           dev: {{ .Values.k8s.interface }}
+          dev: {{ .Values.k8s.interface }}
         gtpc:
           dev: {{ .Values.k8s.interface }}
         gtpu:
@@ -37,5 +37,10 @@ data:
 
     upf:
       pfcp:
+<<<<<<< HEAD
         - name: upf-open5gs1
           dnn: {{ .Values.dnn }}
+=======
+        - name: upf-open5gs
+          dnn: {{ .Values.dnn }}
+>>>>>>> 4e135baa224654db25d3218def15765377671fae
