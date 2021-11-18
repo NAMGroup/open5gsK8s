@@ -1,38 +1,44 @@
-# apiVersion: v1
-# kind: Service
-# metadata:
-#  name: upf-open5gs-gtpu
-#  labels:
-#    epc-mode: upf
-# spec:
-#  type: NodePort
-#  selector:
-#    epc-mode: upf
-#  ports:
-#    - protocol: UDP
-#      port: 2152
-#      targetPort: 2152
-#      nodePort: 32152
-# ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: upf-open5gs
+  name: upf-open5gs{{ .Values.upf.config }}
   labels:
     epc-mode: upf
 spec:
+  type: LoadBalancer
+  loadBalancerIP: 10.10.10.231
   selector:
     epc-mode: upf
+  externalTrafficPolicy: Local
   ports:
-    - protocol: UDP
+    - name: n4
+      protocol: UDP
       port: 8805
       targetPort: 8805
+    - name: gtpu
+      protocol: UDP
+      port: 2152
+      targetPort: 2152
+---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: upf-open5gs{{ .Values.upf.config }}
+#   labels:
+#     epc-mode: upf
+# spec:
+#   selector:
+#     epc-mode: upf
+#   ports:
+#     - protocol: UDP
+#       port: 8805
+#       targetPort: 8805
       
----  
+# ---  
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: open5gs-upf-deployment
+  name: open5gs-upf-deployment{{ .Values.upf.config }}
   labels:
     epc-mode: upf
 spec:
@@ -64,15 +70,15 @@ spec:
             iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE;
             open5gs-upfd -c /open5gs/config-map/upf.yaml;
           volumeMounts:
-          - name: open5gs-upf-config
+          - name: open5gs-upf-config{{ .Values.upf.config }}
             mountPath: /open5gs/config-map/upf.yaml
             subPath: "upf.yaml"
           - mountPath: /dev/net/tun
             name: dev-net-tun            
       volumes:
-        - name: open5gs-upf-config
+        - name: open5gs-upf-config{{ .Values.upf.config }}
           configMap:
-            name: open5gs-upf-config
+            name: open5gs-upf-config{{ .Values.upf.config }}
         - name: dev-net-tun
           hostPath:
             path: /dev/net/tun

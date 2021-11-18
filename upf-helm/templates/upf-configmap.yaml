@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: open5gs-upf-config
+  name: open5gs-upf-config{{ .Values.upf.config }}
   labels:
     epc-mode: upf
 data:
@@ -13,8 +13,9 @@ data:
         pfcp:
            dev: {{ .Values.k8s.interface }}
         gtpu:
-           dev: {{ .Values.k8s.interface }}
-          #  advertise: 10.10.10.59
+          - dev: {{ .Values.k8s.interface }}
+          # : 10.10.10.231
+            advertise: 10.10.10.231
           #  port: 2152
         subnet:
           - addr: 10.45.0.1/16
