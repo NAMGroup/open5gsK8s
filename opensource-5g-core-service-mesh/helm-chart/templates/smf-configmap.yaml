@@ -37,10 +37,5 @@ data:
 
     upf:
       pfcp:
-<<<<<<< HEAD
         - name: upf-open5gs1
           dnn: {{ .Values.dnn }}
-=======
-        - name: upf-open5gs
-          dnn: {{ .Values.dnn }}
->>>>>>> 4e135baa224654db25d3218def15765377671fae
