@@ -6,7 +6,7 @@ metadata:
     epc-mode: upf
 spec:
   type: LoadBalancer
-  loadBalancerIP: 10.10.10.231
+  loadBalancerIP: "{{ .Values.upf.lbIP }}"
   selector:
     epc-mode: upf
   externalTrafficPolicy: Local

@@ -52,4 +52,5 @@ k8s:
  interface: eth0
 
 upf:
-  config: 1
+  config: "1"
+  lbIP: "10.10.10.231"
