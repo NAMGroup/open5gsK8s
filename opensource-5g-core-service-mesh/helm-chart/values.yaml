@@ -46,6 +46,7 @@ amf:
   mcc: "001"
   mnc: "01"
   tac: "100"
+  lbIP: "10.10.10.232"
 
 # Primary/Native kubernetes interface
 k8s:

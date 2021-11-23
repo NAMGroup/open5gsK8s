@@ -22,6 +22,7 @@ metadata:
   labels:
     epc-mode: amf
 spec:
+  loadBalancerIP: "{{ .Values.amf.lbIP }}"
   selector:
     epc-mode: amf
   ports:
