@@ -15,7 +15,7 @@ data:
         gtpu:
           - dev: {{ .Values.k8s.interface }}
           # : 10.10.10.231
-            advertise: 10.10.10.231
+            advertise: {{ .Values.upf.lbIP }}
           #  port: 2152
         subnet:
           - addr: 10.45.0.1/16
