@@ -1,0 +1,199 @@
+[{
+	"_id": {
+		"$oid": "61ba1b315999f70019e06ce4"
+	},
+	"imsi": "001010000000001",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "61ba1b315999f70019e06ce5"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "61ba1b315999f70019e06ce6"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"amf": "8000",
+		"op": null,
+		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "61ba1b455999f70019e06ce7"
+	},
+	"imsi": "001010000000010",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "61ba1b455999f70019e06ce8"
+			},
+			"session": [
+				{
+					"name": "ims",
+					"type": 3,
+					"_id": {
+						"$oid": "61ba1b455999f70019e06ce9"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"amf": "8000",
+		"op": null,
+		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "61ba1b665999f70019e06cea"
+	},
+	"imsi": "001010000000003",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "61ba1b665999f70019e06ceb"
+			},
+			"session": [
+				{
+					"name": "ims",
+					"type": 3,
+					"_id": {
+						"$oid": "61ba1b665999f70019e06cec"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"amf": "8000",
+		"op": null,
+		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+}]
+
