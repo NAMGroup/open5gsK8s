@@ -27,7 +27,8 @@ spec:
         lifecycle:
             postStart:
               exec:
-                command: ["mongorestore", "/data/db/Open5Gs_latest/open5gs/subscribers.bson", "-c", "subscribers", "-d", "open5gs"]
+                # command: ["/bin/sh", "-c", "echo Hello >> ~/la.txt"]
+                command: ["/bin/sh", "-c", "apt-get update && apt-get install wget && cd ~ && wget https://raw.githubusercontent.com/NAMGroup/open5gsK8s/main/subscribers.json && mongoimport -d open5gs -c subscribers --jsonArray subscribers.json"]
         ports:
         - containerPort: 27017
           name: mongodb
