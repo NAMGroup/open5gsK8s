@@ -28,7 +28,7 @@ spec:
             postStart:
               exec:
                 # command: ["/bin/sh", "-c", "echo Hello >> ~/la.txt"]
-                command: ["/bin/sh", "-c", "apt-get update && apt-get install wget && cd ~ && wget https://raw.githubusercontent.com/NAMGroup/open5gsK8s/main/subscribers.json && mongoimport -d open5gs -c subscribers --jsonArray subscribers.json"]
+                command: ["/bin/sh", "-c", "apt-get update && apt-get install wget && cd ~ && wget {{ .Values.mongoURL }} && mongoimport -d open5gs -c subscribers --jsonArray subscribers.json"]
         ports:
         - containerPort: 27017
           name: mongodb
