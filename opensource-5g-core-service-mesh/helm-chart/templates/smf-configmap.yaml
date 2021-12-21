@@ -22,10 +22,11 @@ data:
           dev: {{ .Values.k8s.interface }}
         gtpu:
           dev: {{ .Values.k8s.interface }}
-          #port: 2152    
         subnet:
          - addr: 10.45.0.1/16
-           dnn: {{ .Values.dnn }}
+           dnn: {{ .Values.dnn.upf1 }}
+         - addr: 10.46.0.1/16
+           dnn: {{ .Values.dnn.upf2 }}
         dns:
           - 8.8.8.8
           - 8.8.4.4
@@ -37,5 +38,7 @@ data:
 
     upf:
       pfcp:
-        - name: upf-open5gs1
-          dnn: {{ .Values.dnn }}
+        - addr: 10.10.10.232
+          dnn: {{ .Values.dnn.upf1 }}
+        - addr: 10.10.10.233
+          dnn: {{ .Values.dnn.upf2 }}

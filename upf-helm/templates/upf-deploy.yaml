@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: upf-open5gs{{ .Values.upf.config }}
   labels:
-    epc-mode: upf
+    epc-mode: upf{{ .Values.upf.config }}
 spec:
   type: LoadBalancer
   loadBalancerIP: "{{ .Values.upf.lbIP }}"
   selector:
-    epc-mode: upf
+    epc-mode: upf{{ .Values.upf.config }}
   externalTrafficPolicy: Local
   ports:
     - name: n4
@@ -40,34 +40,35 @@ kind: Deployment
 metadata:
   name: open5gs-upf-deployment{{ .Values.upf.config }}
   labels:
-    epc-mode: upf
+    epc-mode: upf{{ .Values.upf.config }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      epc-mode: upf
+      epc-mode: upf{{ .Values.upf.config }}
   template:
     metadata:
       annotations:
         linkerd.io/inject: disabled
+        sidecar.istio.io/inject: "false"
       labels:
-        epc-mode: upf
+        epc-mode: upf{{ .Values.upf.config }}
     spec:   
       containers:
-        - name: upf
+        - name: upf{{ .Values.upf.config }}
           image: "{{ .Values.open5gs.image.repository }}:{{ .Values.open5gs.image.tag }}"
           imagePullPolicy: {{ .Values.open5gs.image.pullPolicy }}
           securityContext:
             privileged: true
           command: ["/bin/sh", "-c"]
           args:
-          - ip tuntap add name ogstun mode tun;
-            ip addr add 10.45.0.1/16 dev ogstun;
+          - ip tuntap add name {{ .Values.upf.device }} mode tun;
+            ip addr add 10.{{ .Values.upf.tun }}.0.1/16 dev {{ .Values.upf.device }};
             sysctl -w net.ipv6.conf.all.disable_ipv6=1;
-            ip link set ogstun up;
+            ip link set {{ .Values.upf.device }} up;
             sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward";
             sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/' /etc/sysctl.conf;
-            iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE;
+            iptables -t nat -A POSTROUTING -s 10.{{ .Values.upf.tun }}.0.0/16 ! -o {{ .Values.upf.device }} -j MASQUERADE;
             open5gs-upfd -c /open5gs/config-map/upf.yaml;
           volumeMounts:
           - name: open5gs-upf-config{{ .Values.upf.config }}

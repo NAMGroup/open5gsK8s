@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: open5gs-upf-config{{ .Values.upf.config }}
   labels:
-    epc-mode: upf
+    epc-mode: upf{{ .Values.upf.config }}
 data:
   upf.yaml: |
     logger:
@@ -14,10 +14,8 @@ data:
            dev: {{ .Values.k8s.interface }}
         gtpu:
           - dev: {{ .Values.k8s.interface }}
-          # : 10.10.10.231
             advertise: {{ .Values.upf.lbIP }}
-          #  port: 2152
         subnet:
-          - addr: 10.45.0.1/16
-            dev: ogstun
-            dnn: {{ .Values.dnn }}
+          - addr: 10.{{ .Values.upf.tun }}.0.1/16
+            dev: {{ .Values.upf.device }}
+            dnn: {{ .Values.upf.dnn }}
