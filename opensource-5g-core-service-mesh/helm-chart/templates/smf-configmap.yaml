@@ -6,39 +6,5 @@ metadata:
     epc-mode: smf
 data:
   smf.yaml: |
-    logger:
-        file: /var/log/open5gs/smf.log
-
-    parameter:
-        no_ipv6: true
-
-    smf:
-        sbi:     
-        - addr: 0.0.0.0
-          advertise: open5gs-smf
-        pfcp:
-          dev: {{ .Values.k8s.interface }}
-        gtpc:
-          dev: {{ .Values.k8s.interface }}
-        gtpu:
-          dev: {{ .Values.k8s.interface }}
-        subnet:
-         - addr: 10.45.0.1/16
-           dnn: {{ .Values.dnn.upf1 }}
-         - addr: 10.46.0.1/16
-           dnn: {{ .Values.dnn.upf2 }}
-        dns:
-          - 8.8.8.8
-          - 8.8.4.4
-        mtu: 1400
-
-    nrf:
-     sbi:
-      name: open5gs-nrf 
-
-    upf:
-      pfcp:
-        - addr: 10.10.10.232
-          dnn: {{ .Values.dnn.upf1 }}
-        - addr: 10.10.10.233
-          dnn: {{ .Values.dnn.upf2 }}
+    {{ range .Files.Lines .Values.smfConfFile }}
+    {{ . }}{{ end }}

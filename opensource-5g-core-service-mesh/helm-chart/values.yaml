@@ -32,3 +32,5 @@ k8s:
 
 mongoPath: /tmp/data-o5gs
 mongoURL: "https://raw.githubusercontent.com/NAMGroup/open5gsK8s/main/subscribers.json"
+
+smfConfFile: "files/twoSmfConf.yaml"
