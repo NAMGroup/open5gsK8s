@@ -20,6 +20,7 @@ spec:
     metadata:
       labels:
         app: open5gs-mongodb
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - image: free5gmano/nextepc-mongodb
