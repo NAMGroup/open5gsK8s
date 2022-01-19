@@ -10,7 +10,7 @@ k8s:
 
 upf:
   config: ""
-  lbIP: "10.10.10.222"
+  lbIP: "10.10.10.221"
   tun: "45"
   device: "ogstun"
   dnn: internet
