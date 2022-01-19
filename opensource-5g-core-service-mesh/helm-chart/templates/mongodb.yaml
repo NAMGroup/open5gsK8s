@@ -23,12 +23,11 @@ spec:
         sidecar.istio.io/inject: "true"
     spec:
       containers:
-      - image: free5gmano/nextepc-mongodb
+      - image: {{ .Values.mongoImage }}
         name: open5gs-mongodb
         lifecycle:
             postStart:
               exec:
-                # command: ["/bin/sh", "-c", "echo Hello >> ~/la.txt"]
                 command: ["/bin/sh", "-c", "apt-get update && apt-get install wget && cd ~ && wget {{ .Values.mongoURL }} && mongoimport -d open5gs -c subscribers --jsonArray subscribers.json"]
         ports:
         - containerPort: 27017
@@ -49,7 +48,7 @@ metadata:
     type: local
 spec:
   capacity:
-    storage: 20Gi
+    storage: 4Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
@@ -65,4 +64,4 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 20Gi
+      storage: 4Gi

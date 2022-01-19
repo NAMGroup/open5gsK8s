@@ -1,13 +1,12 @@
 open5gs:
   image:
-#    repository: 10.10.10.72:5000/open5gs-aio
-    repository: 10.10.10.72:5000/open5gs-nam
+    repository: patras5g.eu:39080/development/open5gs-nam
     pullPolicy: IfNotPresent
     tag: "v2.3.4"
 
 webui:
   image:
-    repository: 10.10.10.72:5000/open5gs-webui-nam-new
+    repository: patras5g.eu:39080/development/open5gs-webui-nam-new
     pullPolicy: IfNotPresent
     tag: "v2.3.4"
   ingress:
@@ -25,11 +24,12 @@ amf:
   mcc: "001"
   mnc: "01"
   tac: "100"
-  lbIP: "10.10.10.231"
+  lbIP: "10.10.10.222"
 
 k8s:
  interface: eth0
 
+mongoImage: patras5g.eu:39080/development/nextepc-mongodb
 mongoPath: /tmp/data-o5gs
 mongoURL: "https://raw.githubusercontent.com/NAMGroup/open5gsK8s/master/subscribers.json"
 
