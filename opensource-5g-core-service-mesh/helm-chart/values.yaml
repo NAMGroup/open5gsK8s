@@ -29,8 +29,9 @@ amf:
 k8s:
  interface: eth0
 
-mongoImage: patras5g.eu:39080/development/nextepc-mongodb
-mongoPath: /tmp/data-o5gs
-mongoURL: "https://raw.githubusercontent.com/NAMGroup/open5gsK8s/master/subscribers.json"
+mongo:
+  image: patras5g.eu:39080/development/nextepc-mongodb
+  path: /tmp/data-o5gs
+  URL: "https://raw.githubusercontent.com/NAMGroup/open5gsK8s/master/subscribers.json"
 
 smfConfFile: "files/twoSmfConf.yaml"
