@@ -23,12 +23,12 @@ spec:
         sidecar.istio.io/inject: "true"
     spec:
       containers:
-      - image: "{{ .Values.mongo.image }}"
+      - image: {{ .Values.mongoImage }}
         name: open5gs-mongodb
         lifecycle:
             postStart:
               exec:
-                command: ["/bin/sh", "-c", "apt-get update && apt-get install wget && cd ~ && wget {{ .Values.mongo.URL }} && mongoimport -d open5gs -c subscribers --jsonArray subscribers.json"]
+                command: ["/bin/sh", "-c", "apt-get update && apt-get install wget && cd ~ && wget {{ .Values.mongoURL }} && mongoimport -d open5gs -c subscribers --jsonArray subscribers.json"]
         ports:
         - containerPort: 27017
           name: mongodb
@@ -53,7 +53,7 @@ spec:
     - ReadWriteOnce
   hostPath:
     #path: /tmp/data-o5gs
-    path: "{{ .Values.mongo.path }}"
+    path: {{ .Values.mongoPath }}
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
