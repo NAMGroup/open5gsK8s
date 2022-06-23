@@ -1,14 +1,15 @@
 open5gs:
   image:
-    repository: patras5g.eu:39080/development/open5gs-nam
+#    repository: 10.10.10.72:5000/open5gs-aio
+    repository: patras5g.eu:39080/patras5g/open5gs-nam
     pullPolicy: IfNotPresent
-    tag: "v2.3.4"
+    tag: "2.4.8"
 
 webui:
   image:
-    repository: patras5g.eu:39080/development/open5gs-webui-nam-new
+    repository: patras5g.eu:39080/patras5g/web-gui
     pullPolicy: IfNotPresent
-    tag: "v2.3.4"
+    tag: "2.4.8"
   ingress:
     enabled: false
     hosts:

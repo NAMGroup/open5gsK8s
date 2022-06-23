@@ -1,6 +1,75 @@
 [{
 	"_id": {
-		"$oid": "61ba1b315999f70019e06ce4"
+		"$oid": "6216273de134f400193cb7a0"
+	},
+	"imsi": "001010000039511",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "6216273de134f400193cb7a1"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "6216273de134f400193cb7a2"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "47D7798E88774CDB08E30C3A74A82826",
+		"amf": "9001",
+		"op": null,
+		"opc": "AFEE25F5B18CCBA2E5139BE5663AF0A5",
+		"sqn": {
+			"$numberLong": "7808"
+		}
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6e563bde080019410ab1"
 	},
 	"imsi": "001010000000001",
 	"subscribed_rau_tau_timer": 12,
@@ -12,14 +81,14 @@
 			"sst": 1,
 			"default_indicator": true,
 			"_id": {
-				"$oid": "61ba1b315999f70019e06ce5"
+				"$oid": "621f6e563bde080019410ab2"
 			},
 			"session": [
 				{
 					"name": "internet",
 					"type": 3,
 					"_id": {
-						"$oid": "61ba1b315999f70019e06ce6"
+						"$oid": "621f6e563bde080019410ab3"
 					},
 					"pcc_rule": [],
 					"ambr": {
@@ -55,10 +124,10 @@
 		}
 	},
 	"security": {
-		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
-		"amf": "8000",
+		"k": "00112233445566778899AABBCCDDEEFF",
+		"amf": "9001",
 		"op": null,
-		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+		"opc": "000102030405060708090A0B0C0D0E0F"
 	},
 	"msisdn": [],
 	"schema_version": 1,
@@ -66,9 +135,9 @@
 },
 {
 	"_id": {
-		"$oid": "61ba1b455999f70019e06ce7"
+		"$oid": "621f6e713bde080019410ab4"
 	},
-	"imsi": "001010000000010",
+	"imsi": "001010000000002",
 	"subscribed_rau_tau_timer": 12,
 	"network_access_mode": 2,
 	"subscriber_status": 0,
@@ -78,14 +147,14 @@
 			"sst": 1,
 			"default_indicator": true,
 			"_id": {
-				"$oid": "61ba1b455999f70019e06ce8"
+				"$oid": "621f6e713bde080019410ab5"
 			},
 			"session": [
 				{
-					"name": "ims",
+					"name": "internet",
 					"type": 3,
 					"_id": {
-						"$oid": "61ba1b455999f70019e06ce9"
+						"$oid": "621f6e713bde080019410ab6"
 					},
 					"pcc_rule": [],
 					"ambr": {
@@ -121,10 +190,10 @@
 		}
 	},
 	"security": {
-		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
-		"amf": "8000",
+		"k": "00112233445566778899AABBCCDDEEFF",
+		"amf": "9001",
 		"op": null,
-		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+		"opc": "000102030405060708090A0B0C0D0E0F"
 	},
 	"msisdn": [],
 	"schema_version": 1,
@@ -132,7 +201,7 @@
 },
 {
 	"_id": {
-		"$oid": "61ba1b665999f70019e06cea"
+		"$oid": "621f6e953bde080019410ab7"
 	},
 	"imsi": "001010000000003",
 	"subscribed_rau_tau_timer": 12,
@@ -144,14 +213,14 @@
 			"sst": 1,
 			"default_indicator": true,
 			"_id": {
-				"$oid": "61ba1b665999f70019e06ceb"
+				"$oid": "621f6e953bde080019410ab8"
 			},
 			"session": [
 				{
-					"name": "ims",
+					"name": "internet",
 					"type": 3,
 					"_id": {
-						"$oid": "61ba1b665999f70019e06cec"
+						"$oid": "621f6e953bde080019410ab9"
 					},
 					"pcc_rule": [],
 					"ambr": {
@@ -187,10 +256,2188 @@
 		}
 	},
 	"security": {
-		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"k": "00112233445566778899AABBCCDDEEFF",
+		"amf": "9001",
+		"op": null,
+		"opc": "000102030405060708090A0B0C0D0E0F"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6eae3bde080019410aba"
+	},
+	"imsi": "001010000000004",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6eae3bde080019410abb"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6eae3bde080019410abc"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "00112233445566778899AABBCCDDEEFF",
+		"amf": "9001",
+		"op": null,
+		"opc": "000102030405060708090A0B0C0D0E0F"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6ec83bde080019410abd"
+	},
+	"imsi": "001010000000005",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6ec83bde080019410abe"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6ec83bde080019410abf"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "00112233445566778899AABBCCDDEEFF",
+		"amf": "9001",
+		"op": null,
+		"opc": "000102030405060708090A0B0C0D0E0F"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6ee43bde080019410ac0"
+	},
+	"imsi": "001010000000006",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6ee43bde080019410ac1"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6ee43bde080019410ac2"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "00112233445566778899AABBCCDDEEFF",
+		"amf": "9001",
+		"op": null,
+		"opc": "000102030405060708090A0B0C0D0E0F"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6f023bde080019410ac3"
+	},
+	"imsi": "001010000000007",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6f023bde080019410ac4"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6f023bde080019410ac5"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "00112233445566778899AABBCCDDEEFF",
+		"amf": "9001",
+		"op": null,
+		"opc": "000102030405060708090A0B0C0D0E0F"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6f233bde080019410ac6"
+	},
+	"imsi": "001010000000008",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6f233bde080019410ac7"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6f233bde080019410ac8"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "00112233445566778899AABBCCDDEEFF",
+		"amf": "9001",
+		"op": null,
+		"opc": "000102030405060708090A0B0C0D0E0F"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6f383bde080019410ac9"
+	},
+	"imsi": "001010000000009",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6f383bde080019410aca"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6f383bde080019410acb"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "00112233445566778899AABBCCDDEEFF",
+		"amf": "9001",
+		"op": null,
+		"opc": "000102030405060708090A0B0C0D0E0F"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6f4f3bde080019410acc"
+	},
+	"imsi": "001010000000010",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6f4f3bde080019410acd"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6f4f3bde080019410ace"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "00112233445566778899AABBCCDDEEFF",
+		"amf": "9001",
+		"op": null,
+		"opc": "000102030405060708090A0B0C0D0E0F"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6f673bde080019410acf"
+	},
+	"imsi": "001010000034720",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6f673bde080019410ad0"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6f673bde080019410ad1"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "D10139188212BAA6C52E533A1C8664B6",
+		"amf": "9001",
+		"op": null,
+		"opc": "F23B886EE4B5348C6E154FCA6FF0E31B"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6f7d3bde080019410ad2"
+	},
+	"imsi": "001010000034721",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6f7d3bde080019410ad3"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6f7d3bde080019410ad4"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "FF71CA5909813ABEFCBEAD9B0BE9726C",
+		"amf": "9001",
+		"op": null,
+		"opc": "CFF10199EE49179F7D6F5EFEEDDA8727"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6f953bde080019410ad5"
+	},
+	"imsi": "001010000034722",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6f953bde080019410ad6"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6f953bde080019410ad7"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "BDC4358DF0AFC0A2FF073FB5059D9F65",
+		"amf": "9001",
+		"op": null,
+		"opc": "8F976F5A3C96F994387EC9524E4B5E4D"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6fa93bde080019410ad8"
+	},
+	"imsi": "001010000034723",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6fa93bde080019410ad9"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6fa93bde080019410ada"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "62907F2B7987203CC9737F62BCD9C7E0",
 		"amf": "8000",
 		"op": null,
-		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+		"opc": "4CCC6F5819AF5270C600C60312EF7977"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6fbf3bde080019410adb"
+	},
+	"imsi": "001010000034724",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6fbf3bde080019410adc"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6fbf3bde080019410add"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "CA27C0CCA558B7007F58EF15E6B75CE1",
+		"amf": "9001",
+		"op": null,
+		"opc": "D7D79C309A744E0353CCD83A1B2AE0A8"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6fd93bde080019410ade"
+	},
+	"imsi": "001010000034725",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6fd93bde080019410adf"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6fd93bde080019410ae0"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "E92F3263C60FD51ECF2CB09393258FCB",
+		"amf": "9001",
+		"op": null,
+		"opc": "B77E9698474FAB1F9AFE48CEA1874BA6"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f6fef3bde080019410ae1"
+	},
+	"imsi": "001010000034726",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f6fef3bde080019410ae2"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f6fef3bde080019410ae3"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "76C74F7D906BADF691C89A44C0DB1521",
+		"amf": "9001",
+		"op": null,
+		"opc": "5EA840D8A608C5FB8ACD4E015FBEC999"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f70053bde080019410ae4"
+	},
+	"imsi": "001010000034727",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f70053bde080019410ae5"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f70053bde080019410ae6"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "7A9ADE4D8A5BFD25B3C8BB2CA519A35A",
+		"amf": "9001",
+		"op": null,
+		"opc": "F67440689E07355A455070BC2D0BF952      "
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f701a3bde080019410ae7"
+	},
+	"imsi": "001010000034728",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f701a3bde080019410ae8"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f701a3bde080019410ae9"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "37A457D43A6A14FC62B82B94034CF7F9",
+		"amf": "9001",
+		"op": null,
+		"opc": "3F20EE210F33050C7AC0F0E0899F0FB4"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f704f3bde080019410aea"
+	},
+	"imsi": "460000000034729",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f704f3bde080019410aeb"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f704f3bde080019410aec"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "600A659CE19D6E862F29AEB168DE7164",
+		"amf": "9001",
+		"op": null,
+		"opc": "B053FADD67FE3B0B2D2D8FF31FCF81B0"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f70623bde080019410aed"
+	},
+	"imsi": "001010000039510",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f70623bde080019410aee"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f70623bde080019410aef"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "C62A09B9BBFDF19EF7122C8C3A478FB0",
+		"amf": "9001",
+		"op": null,
+		"opc": "897284AB10AC928E4CA84D20B55DD35F"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f70803bde080019410af0"
+	},
+	"imsi": "001010000039512",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f70803bde080019410af1"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f70803bde080019410af2"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "7E15397763EC870BF76672FFD0A245BE",
+		"amf": "9001",
+		"op": null,
+		"opc": "B78357240C0B2714B4AA04093E36EB23"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f70d33bde080019410af3"
+	},
+	"imsi": "001010000039513",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f70d33bde080019410af4"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f70d33bde080019410af5"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "EA8ADB198EF22B099140956BFBA37B33",
+		"amf": "9001",
+		"op": null,
+		"opc": "3CCDFAF6B86233DCEBFDEAC5C37CC499"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f70e83bde080019410af6"
+	},
+	"imsi": "001010000039514",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f70e83bde080019410af7"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f70e83bde080019410af8"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "AC1551511795A6D8761921943FE9E528",
+		"amf": "9001",
+		"op": null,
+		"opc": "60DA539455969CE67B829B44D4D367D0"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f70fb3bde080019410af9"
+	},
+	"imsi": "001010000039515",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f70fb3bde080019410afa"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f70fb3bde080019410afb"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "5BFEB2C7C63B53A04FBE070CB0A764DD",
+		"amf": "9001",
+		"op": null,
+		"opc": "38CF796502BE9170E915C87F12B6C4BB"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f71113bde080019410afc"
+	},
+	"imsi": "001010000039516",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f71113bde080019410afd"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f71113bde080019410afe"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "35D8032AD081BC417D17CEF1440D1CE9",
+		"amf": "9001",
+		"op": null,
+		"opc": "3C9B9DE15624E8350F94A9E5ABA46A3D"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f71243bde080019410aff"
+	},
+	"imsi": "001010000039517",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f71243bde080019410b00"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f71243bde080019410b01"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "1A2B6D175449A9DBFFCD9C6A204B5004",
+		"amf": "9001",
+		"op": null,
+		"opc": "758DCCF45C43A1AF01208C19ACA7450B"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f71383bde080019410b02"
+	},
+	"imsi": "001010000039518",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f71383bde080019410b03"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f71383bde080019410b04"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "1D059C11AB7B2C5B9C80F3170C575FFB",
+		"amf": "9001",
+		"op": null,
+		"opc": "73EB41C91B5C2AA7E661CE28923827B8"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f71493bde080019410b05"
+	},
+	"imsi": "001010000045630",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f71493bde080019410b06"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f71493bde080019410b07"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "C13B0E5C33BCE23CF107C9FBEF542457",
+		"amf": "9001",
+		"op": null,
+		"opc": "37FC3CDE8347691D3CCDC85C3EC5543C"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f715c3bde080019410b08"
+	},
+	"imsi": "001010000045631",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f715c3bde080019410b09"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f715c3bde080019410b0a"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "3A761315B292445EA7D4542C5F379982",
+		"amf": "9001",
+		"op": null,
+		"opc": "824FA2B7712BC259D852FEC7737D53D5"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f716d3bde080019410b0b"
+	},
+	"imsi": "001010000045632",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f716d3bde080019410b0c"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f716d3bde080019410b0d"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "A27E11BD0F916863D71964B2141581C1",
+		"amf": "9001",
+		"op": null,
+		"opc": "881CAC2B9BD6BE4DFB7DDBE274A48755"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f717f3bde080019410b0e"
+	},
+	"imsi": "001010000045633",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f717f3bde080019410b0f"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f717f3bde080019410b10"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "32ADE41AC566FB8FC069B407F95CB20E",
+		"amf": "9001",
+		"op": null,
+		"opc": "FB9B67AD4E5E1E221C85C4CDD86B06BB"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f71983bde080019410b11"
+	},
+	"imsi": "001010000045634",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f71983bde080019410b12"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f71983bde080019410b13"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "827D920A8FB01A5D4DED9EFB15DCD7C3",
+		"amf": "9001",
+		"op": null,
+		"opc": "FB7BB7F022341340CA1CF620A93AC420"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f71ad3bde080019410b14"
+	},
+	"imsi": "001010000045635",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f71ad3bde080019410b15"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f71ad3bde080019410b16"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "832FB759485897894F9AA86553E4A364",
+		"amf": "9001",
+		"op": null,
+		"opc": "C0689CBFB5CE7ED5F28022935DAF9009"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f71bd3bde080019410b17"
+	},
+	"imsi": "001010000045636",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f71bd3bde080019410b18"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f71bd3bde080019410b19"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "B0899F5DDE669D0F91BD9EE85144F838",
+		"amf": "9001",
+		"op": null,
+		"opc": "D2467C17D015DE7168E050C26AE0F35E"
+	},
+	"msisdn": [],
+	"schema_version": 1,
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "621f71d33bde080019410b1a"
+	},
+	"imsi": "001010000039519",
+	"subscribed_rau_tau_timer": 12,
+	"network_access_mode": 2,
+	"subscriber_status": 0,
+	"access_restriction_data": 32,
+	"slice": [
+		{
+			"sst": 1,
+			"default_indicator": true,
+			"_id": {
+				"$oid": "621f71d33bde080019410b1b"
+			},
+			"session": [
+				{
+					"name": "internet",
+					"type": 3,
+					"_id": {
+						"$oid": "621f71d33bde080019410b1c"
+					},
+					"pcc_rule": [],
+					"ambr": {
+						"uplink": {
+							"value": 1,
+							"unit": 3
+						},
+						"downlink": {
+							"value": 1,
+							"unit": 3
+						}
+					},
+					"qos": {
+						"index": 9,
+						"arp": {
+							"priority_level": 8,
+							"pre_emption_capability": 1,
+							"pre_emption_vulnerability": 1
+						}
+					}
+				}
+			]
+		}
+	],
+	"ambr": {
+		"uplink": {
+			"value": 1,
+			"unit": 3
+		},
+		"downlink": {
+			"value": 1,
+			"unit": 3
+		}
+	},
+	"security": {
+		"k": "581EF095583266B41CA068ED0437A5A1",
+		"amf": "9001",
+		"op": null,
+		"opc": "DB092A121E7E7C69C0EDA78D7D8A599E"
 	},
 	"msisdn": [],
 	"schema_version": 1,
