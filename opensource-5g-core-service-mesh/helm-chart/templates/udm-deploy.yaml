@@ -27,6 +27,7 @@ spec:
     metadata:
       labels:
         epc-mode: udm
+        sidecar.istio.io/inject: "true"
     spec:   
       containers:
         - name: udm

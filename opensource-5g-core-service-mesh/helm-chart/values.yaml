@@ -25,12 +25,14 @@ amf:
   mcc: "001"
   mnc: "01"
   tac: "100"
-  lbIP: "10.10.10.231"
+  # lbIP: "10.10.10.221"
 
 k8s:
  interface: eth0
 
-mongoPath: /tmp/data-o5gs
-mongoURL: "https://raw.githubusercontent.com/NAMGroup/open5gsK8s/master/subscribers.json"
+mongo:
+  image: patras5g.eu:39080/development/nextepc-mongodb
+  path: /tmp/data-o5gs
+  URL: "https://raw.githubusercontent.com/NAMGroup/open5gsK8s/master/subscribers.json"
 
 smfConfFile: "files/twoSmfConf.yaml"

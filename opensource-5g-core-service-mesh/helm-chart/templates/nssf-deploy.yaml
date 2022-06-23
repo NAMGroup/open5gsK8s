@@ -27,6 +27,8 @@ spec:
     metadata:
       labels:
         epc-mode: nssf
+        sidecar.istio.io/inject: "true"
+
     spec:   
       containers:
         - name: nssf

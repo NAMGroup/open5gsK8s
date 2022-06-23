@@ -29,6 +29,7 @@ spec:
 #        "helm.sh/hook": pre-install    
       labels:
         epc-mode: nrf
+        sidecar.istio.io/inject: "true"
     spec:  
       containers:
         - name: nrf

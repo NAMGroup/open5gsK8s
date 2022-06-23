@@ -27,6 +27,7 @@ spec:
     metadata:
       labels:
         epc-mode: bsf
+        sidecar.istio.io/inject: "true"
     spec:    
       containers:
         - name: bsf

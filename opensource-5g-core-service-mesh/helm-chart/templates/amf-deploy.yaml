@@ -45,6 +45,7 @@ spec:
     metadata:
       labels:
         epc-mode: amf
+        sidecar.istio.io/inject: "true"
     spec:    
       containers:
         - name: amf

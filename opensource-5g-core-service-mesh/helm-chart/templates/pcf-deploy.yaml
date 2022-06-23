@@ -27,6 +27,7 @@ spec:
     metadata:
       labels:
         epc-mode: pcf
+        sidecar.istio.io/inject: "true"
     spec:    
       containers:
         - name: pcf

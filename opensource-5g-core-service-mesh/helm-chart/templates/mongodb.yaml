@@ -20,15 +20,15 @@ spec:
     metadata:
       labels:
         app: open5gs-mongodb
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
-      - image: free5gmano/nextepc-mongodb
+      - image: "{{ .Values.mongo.image }}"
         name: open5gs-mongodb
         lifecycle:
             postStart:
               exec:
-                # command: ["/bin/sh", "-c", "echo Hello >> ~/la.txt"]
-                command: ["/bin/sh", "-c", "apt-get update && apt-get install wget && cd ~ && wget {{ .Values.mongoURL }} && mongoimport -d open5gs -c subscribers --jsonArray subscribers.json"]
+                command: ["/bin/sh", "-c", "apt-get update && apt-get install wget && cd ~ && wget {{ .Values.mongo.URL }} && mongoimport -d open5gs -c subscribers --jsonArray subscribers.json"]
         ports:
         - containerPort: 27017
           name: mongodb
@@ -48,12 +48,12 @@ metadata:
     type: local
 spec:
   capacity:
-    storage: 20Gi
+    storage: 4Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
     #path: /tmp/data-o5gs
-    path: {{ .Values.mongoPath }}
+    path: "{{ .Values.mongo.path }}"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -64,4 +64,4 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 20Gi
+      storage: 4Gi

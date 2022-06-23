@@ -27,6 +27,7 @@ spec:
     metadata:
       labels:
         epc-mode: ausf
+        sidecar.istio.io/inject: "true"
     spec:    
       containers:
         - name: ausf
