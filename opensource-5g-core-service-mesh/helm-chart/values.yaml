@@ -1,6 +1,5 @@
 open5gs:
   image:
-#    repository: 10.10.10.72:5000/open5gs-aio
     repository: patras5g.eu:39080/patras5g/open5gs-nam
     pullPolicy: IfNotPresent
     tag: "2.4.8"
@@ -35,4 +34,4 @@ mongo:
   path: /tmp/data-o5gs
   URL: "https://raw.githubusercontent.com/NAMGroup/open5gsK8s/master/subscribers.json"
 
-smfConfFile: "files/twoSmfConf.yaml"
+smfConfFile: "files/oneSmfConf.yaml"
