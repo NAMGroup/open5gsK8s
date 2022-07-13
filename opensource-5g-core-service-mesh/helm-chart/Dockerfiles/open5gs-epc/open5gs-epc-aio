@@ -11,6 +11,6 @@ RUN apt-get update && \
    iptables iputils-ping tcpdump cmake curl gnupg libtins-dev libtalloc-dev meson && \ 
    git clone --recursive -b v2.4.8 https://github.com/open5gs/open5gs && \
    ln -s open5gs/subprojects subprojects && \
-   cd open5gs && meson configure -Dmetrics_impl=prometheus && meson build --prefix=/ && ninja -C build && cd build && ninja install
+   cd open5gs && meson -Dmetrics_impl=prometheus build --prefix=/ && ninja -C build && cd build && ninja install
 
 WORKDIR /
