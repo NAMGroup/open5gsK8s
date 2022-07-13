@@ -32,3 +32,6 @@ upf:
     - addr: 10.10.10.222
       dnn: internet
 
+metrics:
+    addr: 0.0.0.0
+    port: 9090
