@@ -3,7 +3,7 @@ open5gs:
 #    repository: 10.10.10.72:5000/open5gs-aio
     repository: patras5g.eu:39080/patras5g/open5gs-nam
     pullPolicy: IfNotPresent
-    tag: "2.4.8.1"
+    tag: "2.4.8.2"
 
 k8s:
  interface: eth0
