@@ -8,9 +8,14 @@ spec:
   selector:
     epc-mode: smf
   ports:
-    - protocol: TCP
+    - name: smf-service-port
+      protocol: TCP
       port: 80 
-      targetPort: 80  
+      targetPort: 80
+    - name: prometheus-port
+      protocol: TCP
+      port: 9090
+      targetPort: 9090  
 ---  
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
