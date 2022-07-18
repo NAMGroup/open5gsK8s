@@ -8,7 +8,7 @@ k8s:
  interface: eth0
 
 upf:
-  config: ""
+  #config: ""
   #lbIP: "10.10.10.222"
   #tun: "45"
   device: "ogstun"

@@ -36,11 +36,12 @@ helm install -n open5gs-hack -f values.yaml 5gcore ./ --set amf.lbIP="10.10.10.2
 ## Deploying the UPF
 
 To deploy a UPF the following parameters are required on deployment:
+* upf.config="1|2 (upf 1 or upf 2)"
 * upf.lbIP="THE UPF IP WE WANT THE LB TO PROVIDE"
 * upf.tun="THE TUN SUBNET NUMBER - 45 or 46"
 * upf.dnn="internet or work"
 
 To deploy with Helm use:
 ```bash
-helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.lbIP="10.10.10.222",upf.tun="45",upf.dnn="internet"
+helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.config="",upf.lbIP="10.10.10.222",upf.tun="45",upf.dnn="internet"
 ```
