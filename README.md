@@ -1,14 +1,4 @@
-# open5gsK8s
-
-```bash
-cd open5gsK8s/upf-helm/ && helm -n open5gs install -f values.yaml upf ./
-```
-```bash
-cd open5gsK8s/upf-helm/ &&  helm -n open5gs install --set upf.config=2,upf.lbIP="10.10.10.233",upf.tun="46",upf.device="ogstun2",upf.dnn=ims -f values.yaml upf2 ./
-```
-```bash
-cd open5gsK8s/cd opensource-5g-core-service-mesh/helm-chart/ && helm -n open5gs install -f values.yaml 5gcore ./
-```
+# Open5Gs on K8s
 
 ## Deploying the core
 
@@ -28,11 +18,6 @@ To deploy the core with two UPFs the following parameters are required on deploy
 * upf.upf1IP="THE FIRST UPF IP"
 * upf.upf2IP="THE SECOND UPF IP"
 
-To deploy with Helm use:
-```bash
-helm install -n open5gs-hack -f values.yaml 5gcore ./ --set amf.lbIP="10.10.10.221",upf.upfs="2",upf.upf1IP="10.10.10.222",upf.upf2IP="172.16.100.161"
-```
-
 ## Deploying the UPF
 
 To deploy a UPF the following parameters are required on deployment:
@@ -41,7 +26,124 @@ To deploy a UPF the following parameters are required on deployment:
 * upf.tun="tun subnet number - 45, 46, ..."
 * upf.dnn="dnn"
 
-To deploy with Helm use:
+## Examples
+### Example 1 UPF
+
+#### HDeploying using elm
 ```bash
+helm install -n open5gs-hack -f values.yaml 5gcore ./ --set amf.lbIP="10.10.10.221",upf.upf1IP="10.10.10.222"
 helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.config="1",upf.lbIP="10.10.10.222",upf.tun="45",upf.dnn="internet"
+```
+
+#### Deploying using OSM (--config)
+```JSON
+{
+	"additionalParamsForVnf": [{
+		"member-vnf-index": "1",
+		"additionalParamsForKdu": [{
+			"kdu_name": "open5gs",
+			"k8s-namespace": "open5gs-hack",
+			"additionalParams": {
+				"amf": {
+"lbIP": "10.10.10.221"
+},
+				"upf": {
+					"upf1IP": "10.10.10.222"
+					}
+			}
+		}]
+	}]
+}
+```
+
+```JSON
+{
+	"additionalParamsForVnf": [{
+		"member-vnf-index": "1",
+		"additionalParamsForKdu": [{
+			"kdu_name": "upf",
+			"k8s-namespace": "open5gs-hack",
+			"additionalParams": {
+				"upf": {
+				"config": "1",
+"lbIP": "10.10.10.222",
+"tun": "45",
+"dnn": "internet"
+				}
+			}
+		}]
+	}]
+}
+```
+
+### Example 2 UPFs (one at the central DC and one at the edge)
+#### Deploying using Helm
+```bash
+# On main cluster
+helm install -n open5gs-hack -f values.yaml 5gcore ./ --set amf.lbIP="10.10.10.221",upf.upfs="2",upf.upf1IP="10.10.10.222",upf.upf2IP="172.16.100.161"
+helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.config="1",upf.lbIP="10.10.10.222",upf.tun="45",upf.dnn="internet"
+
+# On edge cluster
+helm install -n open5gs-hack -f values.yaml upf2 ./ --set upf.config="2",upf.lbIP="172.16.100.161",upf.tun="46",upf.dnn="work"
+```
+
+#### Deploying using OSM (--config)
+```JSON
+{
+	"additionalParamsForVnf": [{
+		"member-vnf-index": "1",
+		"additionalParamsForKdu": [{
+			"kdu_name": "open5gs",
+			"k8s-namespace": "open5gs-hack",
+			"additionalParams": {
+				"amf": {
+"lbIP": "10.10.10.221"
+},
+				"upf": {
+					"upf1IP": "10.10.10.222"
+					}
+			}
+		}]
+	}]
+}
+```
+
+```JSON
+{
+	"additionalParamsForVnf": [{
+		"member-vnf-index": "1",
+		"additionalParamsForKdu": [{
+			"kdu_name": "upf",
+			"k8s-namespace": "open5gs-hack",
+			"additionalParams": {
+				"upf": {
+				"config": "1",
+"lbIP": "10.10.10.222",
+"tun": "45",
+"dnn": "internet"
+				}
+			}
+		}]
+	}]
+}
+```
+
+```JSON
+{
+	"additionalParamsForVnf": [{
+		"member-vnf-index": "1",
+		"additionalParamsForKdu": [{
+			"kdu_name": "upf",
+			"k8s-namespace": "open5gs-hack",
+			"additionalParams": {
+				"upf": {
+				"config": "2",
+"lbIP": "172.16.100.161",
+"tun": "46",
+"dnn": "work"
+				}
+			}
+		}]
+	}]
+}
 ```
