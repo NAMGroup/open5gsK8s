@@ -43,5 +43,5 @@ To deploy a UPF the following parameters are required on deployment:
 
 To deploy with Helm use:
 ```bash
-helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.config="",upf.lbIP="10.10.10.222",upf.tun="45",upf.dnn="internet"
+helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.config="1",upf.lbIP="10.10.10.222",upf.tun="45",upf.dnn="internet"
 ```
