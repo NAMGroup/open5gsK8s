@@ -16,9 +16,9 @@ webui:
         paths: ["/"]
         tls: false
 
-dnn: 
-  upf1: "internet"
-  upf2: "work" 
+#dnn: 
+  #upf1: "internet"
+  #upf2: "work" 
 
 amf:
   mcc: "001"
