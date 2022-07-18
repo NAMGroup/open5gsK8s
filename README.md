@@ -1,12 +1,12 @@
 # open5gsK8s
 
-```
+```bash
 cd open5gsK8s/upf-helm/ && helm -n open5gs install -f values.yaml upf ./
 ```
-```
+```bash
 cd open5gsK8s/upf-helm/ &&  helm -n open5gs install --set upf.config=2,upf.lbIP="10.10.10.233",upf.tun="46",upf.device="ogstun2",upf.dnn=ims -f values.yaml upf2 ./
 ```
-```
+```bash
 cd open5gsK8s/cd opensource-5g-core-service-mesh/helm-chart/ && helm -n open5gs install -f values.yaml 5gcore ./
 ```
 
@@ -37,9 +37,9 @@ helm install -n open5gs-hack -f values.yaml 5gcore ./ --set amf.lbIP="10.10.10.2
 
 To deploy a UPF the following parameters are required on deployment:
 * upf.config="1|2 (upf 1 or upf 2)"
-* upf.lbIP="THE UPF IP WE WANT THE LB TO PROVIDE"
-* upf.tun="THE TUN SUBNET NUMBER - 45 or 46"
-* upf.dnn="internet or work"
+* upf.lbIP="the UPF IP we want from the LB"
+* upf.tun="tun subnet number - 45, 46, ..."
+* upf.dnn="dnn"
 
 To deploy with Helm use:
 ```bash
