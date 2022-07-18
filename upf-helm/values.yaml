@@ -1,6 +1,5 @@
 open5gs:
   image:
-#    repository: 10.10.10.72:5000/open5gs-aio
     repository: patras5g.eu:39080/patras5g/open5gs-nam
     pullPolicy: IfNotPresent
     tag: "2.4.8.2"
@@ -10,7 +9,7 @@ k8s:
 
 upf:
   config: ""
-  # lbIP: "10.10.10.222"
-  tun: "45"
+  #lbIP: "10.10.10.222"
+  #tun: "45"
   device: "ogstun"
-  dnn: internet
+  #dnn: internet
