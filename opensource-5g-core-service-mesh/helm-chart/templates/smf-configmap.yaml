@@ -6,5 +6,47 @@ metadata:
     epc-mode: smf
 data:
   smf.yaml: |
-    {{ range .Files.Lines .Values.smfConfFile }}
-    {{ . }}{{ end }}
+    logger:
+        file: /var/log/open5gs/smf.log
+    
+    parameter:
+        no_ipv6: true
+    
+    smf:
+        sbi:
+        - addr: 0.0.0.0
+          advertise: open5gs-smf
+        pfcp:
+          dev: eth0
+        gtpc:
+          dev: eth0
+        gtpu:
+          dev: eth0
+        subnet:
+         - addr: 10.45.0.1/16
+           dnn: internet         
+         {{ if eq (.Values.upf.upfs |toString) "2" }}
+         - addr: 10.46.0.1/16
+           dnn: work
+         {{end}}
+        dns:
+          - 8.8.8.8
+          - 8.8.4.4
+        mtu: 1400
+    
+    nrf:
+     sbi:
+      name: open5gs-nrf
+    
+    upf:
+      pfcp:
+        - addr: {{ .Values.upf.upf1IP }}
+          dnn: internet  
+        {{ if eq (.Values.upf.upfs | toString) "2" }}
+        - addr: {{ .Values.upf.upf2IP }}
+          dnn: work
+        {{end}}
+    
+    metrics:
+      addr: 0.0.0.0
+      port: 9090

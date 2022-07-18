@@ -17,7 +17,7 @@ smf:
     subnet:
      - addr: 10.45.0.1/16
        dnn: internet
-     {{ if eq (.Values.smfs|toString) "2" }}
+     {{ if eq (.Values.upf.upfs|toString) "2" }}
      - addr: 10.46.0.1/16
        dnn: work
      {{end}}
@@ -32,12 +32,10 @@ nrf:
 
 upf:
   pfcp:
-    - addr: 10.10.10.222
+    - addr: {{.Values.upf.upf1IP}}
       dnn: internet
-    {{ if eq (.Values.smfs |toString) "2" }}
-    - addr: 10.46.0.1/16
-      dnn: work
-    - addr: 172.16.100.161
+    {{ if eq (.Values.upf.upfs |toString) "2" }}
+    - addr: {{.Valuse.upf.upf2IP}}
       dnn: work
     {{end}}
 

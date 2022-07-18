@@ -34,4 +34,9 @@ mongo:
   path: /tmp/data-o5gs
   URL: "https://raw.githubusercontent.com/NAMGroup/open5gsK8s/master/subscribers.json"
 
-smfConfFile: "files/twoSmfConf.yaml"
+#smfConfFile: "files/twoSmfConf.yaml"
+
+#upf:
+  #upfs: 2
+  #upf1IP: "10.10.10.222"
+  #upf2IP: "172.16.100.161"
