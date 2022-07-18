@@ -6,6 +6,7 @@
 To deploy the core with one UPF the following parameters are required on deployment:
 * amf.lbIP="THE AMF IP"
 * upf.upf1IP="THE UPF IP"
+* dnn.upf1="dnn1"
 
 ### Two UPFs
 To deploy the core with two UPFs the following parameters are required on deployment:
@@ -13,6 +14,8 @@ To deploy the core with two UPFs the following parameters are required on deploy
 * upf.upfs="2"
 * upf.upf1IP="THE FIRST UPF IP"
 * upf.upf2IP="THE SECOND UPF IP"
+* dnn.upf1="dnn1"
+* dnn.upf2="dnn2"
 
 ## Deploying the UPF
 
@@ -27,7 +30,7 @@ To deploy a UPF the following parameters are required on deployment:
 
 #### Deploying using Helm
 ```bash
-helm install -n open5gs-hack -f values.yaml 5gcore ./ --set amf.lbIP="10.10.10.221",upf.upf1IP="10.10.10.222"
+helm install -n open5gs-hack -f values.yaml 5gcore ./ --set amf.lbIP="10.10.10.221",upf.upf1IP="10.10.10.222",dnn.upf1="dnn1"
 helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.config="1",upf.lbIP="10.10.10.222",upf.tun="45",upf.dnn="internet"
 ```
 
@@ -42,10 +45,13 @@ helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.config="1",upf.lbI
 			"additionalParams": {
 				"amf": {
 					"lbIP": "10.10.10.221"
-					},
+				},
 				"upf": {
 					"upf1IP": "10.10.10.222"
-					}
+				},
+				"dnn": {
+					"upf1": "internet"
+				}
 			}
 		}]
 	}]
@@ -76,7 +82,7 @@ helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.config="1",upf.lbI
 #### Deploying using Helm
 ```bash
 # On main cluster
-helm install -n open5gs-hack -f values.yaml 5gcore ./ --set amf.lbIP="10.10.10.221",upf.upfs="2",upf.upf1IP="10.10.10.222",upf.upf2IP="172.16.100.161"
+helm install -n open5gs-hack -f values.yaml 5gcore ./ --set amf.lbIP="10.10.10.221",upf.upfs="2",upf.upf1IP="10.10.10.222",upf.upf2IP="172.16.100.161",dnn.upf1="internet",dnn.upf2="work"
 helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.config="1",upf.lbIP="10.10.10.222",upf.tun="45",upf.dnn="internet"
 
 # On edge cluster
@@ -99,6 +105,12 @@ helm install -n open5gs-hack -f values.yaml upf2 ./ --set upf.config="2",upf.lbI
 				},
 				"upf": {
 					"upf1IP": "10.10.10.222"
+				},
+				"dnn": {
+					"upf1": "internet"
+				},
+				"dnn": {
+					"upf2": "work"
 				}
 			}
 		}]
