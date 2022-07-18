@@ -7,10 +7,6 @@ To deploy the core with one UPF the following parameters are required on deploym
 * amf.lbIP="THE AMF IP"
 * upf.upf1IP="THE UPF IP"
 
-To deploy with Helm use:
-```bash
-helm install -n open5gs-hack -f values.yaml 5gcore ./ --set amf.lbIP="10.10.10.221",upf.upf1IP="10.10.10.222"
-```
 ### Two UPFs
 To deploy the core with two UPFs the following parameters are required on deployment:
 * amf.lbIP="THE AMF IP"
@@ -29,7 +25,7 @@ To deploy a UPF the following parameters are required on deployment:
 ## Examples
 ### Example 1 UPF
 
-#### HDeploying using elm
+#### Deploying using Helm
 ```bash
 helm install -n open5gs-hack -f values.yaml 5gcore ./ --set amf.lbIP="10.10.10.221",upf.upf1IP="10.10.10.222"
 helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.config="1",upf.lbIP="10.10.10.222",upf.tun="45",upf.dnn="internet"
@@ -45,8 +41,8 @@ helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.config="1",upf.lbI
 			"k8s-namespace": "open5gs-hack",
 			"additionalParams": {
 				"amf": {
-"lbIP": "10.10.10.221"
-},
+					"lbIP": "10.10.10.221"
+					},
 				"upf": {
 					"upf1IP": "10.10.10.222"
 					}
@@ -66,9 +62,9 @@ helm install -n open5gs-hack -f values.yaml upf1 ./ --set upf.config="1",upf.lbI
 			"additionalParams": {
 				"upf": {
 				"config": "1",
-"lbIP": "10.10.10.222",
-"tun": "45",
-"dnn": "internet"
+				"lbIP": "10.10.10.222",
+				"tun": "45",
+				"dnn": "internet"
 				}
 			}
 		}]
@@ -88,6 +84,8 @@ helm install -n open5gs-hack -f values.yaml upf2 ./ --set upf.config="2",upf.lbI
 ```
 
 #### Deploying using OSM (--config)
+
+**Core (on main cluster)**
 ```JSON
 {
 	"additionalParamsForVnf": [{
@@ -97,17 +95,17 @@ helm install -n open5gs-hack -f values.yaml upf2 ./ --set upf.config="2",upf.lbI
 			"k8s-namespace": "open5gs-hack",
 			"additionalParams": {
 				"amf": {
-"lbIP": "10.10.10.221"
-},
+					"lbIP": "10.10.10.221"
+				},
 				"upf": {
 					"upf1IP": "10.10.10.222"
-					}
+				}
 			}
 		}]
 	}]
 }
 ```
-
+**UPF 1 (on main cluster)**
 ```JSON
 {
 	"additionalParamsForVnf": [{
@@ -117,10 +115,10 @@ helm install -n open5gs-hack -f values.yaml upf2 ./ --set upf.config="2",upf.lbI
 			"k8s-namespace": "open5gs-hack",
 			"additionalParams": {
 				"upf": {
-				"config": "1",
-"lbIP": "10.10.10.222",
-"tun": "45",
-"dnn": "internet"
+					"config": "1",
+					"lbIP": "10.10.10.222",
+					"tun": "45",
+					"dnn": "internet"
 				}
 			}
 		}]
@@ -128,6 +126,7 @@ helm install -n open5gs-hack -f values.yaml upf2 ./ --set upf.config="2",upf.lbI
 }
 ```
 
+**UPF 2 (on edge cluster)**
 ```JSON
 {
 	"additionalParamsForVnf": [{
@@ -138,9 +137,9 @@ helm install -n open5gs-hack -f values.yaml upf2 ./ --set upf.config="2",upf.lbI
 			"additionalParams": {
 				"upf": {
 				"config": "2",
-"lbIP": "172.16.100.161",
-"tun": "46",
-"dnn": "work"
+					"lbIP": "172.16.100.161",
+					"tun": "46",
+					"dnn": "work"
 				}
 			}
 		}]
