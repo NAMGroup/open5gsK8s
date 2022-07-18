@@ -158,3 +158,12 @@ helm install -n open5gs-hack -f values.yaml upf2 ./ --set upf.config="2",upf.lbI
 	}]
 }
 ```
+
+**If the deployment goes into a CrashLoopBackoff run:**
+```bash
+helm -n open5gs-hack ls
+```
+**Get the chart name and run:**
+```bash
+helm -n open5gs-hack uninstall chart-name
+```
