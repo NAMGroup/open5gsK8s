@@ -109,10 +109,7 @@ helm install -n open5gs-hack -f values.yaml upf2 ./ --set upf.config="2",upf.lbI
 					"upf2IP": "172.16.100.161"
 				},
 				"dnn": {
-					"upf1": "internet"
-				},
-				"dnn": {
-					"ipf1": "internet",
+					"upf1": "internet",
 					"upf2": "work"
 				}
 			}
