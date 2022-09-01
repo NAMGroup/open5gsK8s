@@ -7,6 +7,7 @@ metadata:
 spec:
 # type: NodePort
  type: LoadBalancer
+ loadBalancerIP: "{{ .Values.amf.lbIP }}"
  selector:
    epc-mode: amf
  ports:
@@ -22,7 +23,6 @@ metadata:
   labels:
     epc-mode: amf
 spec:
-  loadBalancerIP: "{{ .Values.amf.lbIP }}"
   selector:
     epc-mode: amf
   ports:
