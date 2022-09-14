@@ -1,12 +1,12 @@
 open5gs:
   image:
-    repository: patras5g.eu:39080/patras5g/open5gs-nam
+    repository: harbor.patras5g.eu/patras5g/open5gs-nam
     pullPolicy: IfNotPresent
     tag: "2.4.8.3"
 
 webui:
   image:
-    repository: patras5g.eu:39080/patras5g/web-gui
+    repository: harbor.patras5g.eu/patras5g/web-gui
     pullPolicy: IfNotPresent
     tag: "2.4.8.3"
   ingress:
@@ -16,27 +16,15 @@ webui:
         paths: ["/"]
         tls: false
 
-#dnn: 
-  #upf1: "internet"
-  #upf2: "work" 
-
 amf:
   mcc: "001"
   mnc: "01"
   tac: "100"
-  # lbIP: "10.10.10.221"
-
+ 
 k8s:
  interface: eth0
 
 mongo:
-  image: patras5g.eu:39080/patras5g/nextepc-mongodb
+  image: harbor.patras5g.eu/patras5g/nextepc-mongodb
   path: /tmp/data-o5gs
   URL: "https://raw.githubusercontent.com/NAMGroup/open5gsK8s/master/subscribers.json"
-
-#smfConfFile: "files/twoSmfConf.yaml"
-
-#upf:
-  #upfs: 2
-  #upf1IP: "10.10.10.222"
-  #upf2IP: "172.16.100.161"
